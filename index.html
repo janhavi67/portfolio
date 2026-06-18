@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janhavi Kasture </title>
+
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Devicon CDN for developer logo icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==================== SPLASH SCREEN (OKARA AI STYLE) ==================== -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-bg" id="splashBg"></div>
+    <div class="splash-center">
+      <!-- Animated custom JK Logo Video -->
+      <div class="logo-reveal-container" id="logoClickTrigger">
+        <video id="splashVideo" style="position: absolute; width: 0; height: 0; opacity: 0; pointer-events: none;" src="logo-reveal.mp4" autoplay muted playsinline preload="auto"></video>
+        <canvas id="logoCanvas" class="jk-logo-video" width="560" height="315"></canvas>
+      </div>
+      <p class="splash-prompt" id="splashPrompt">CLICK TO DECRYPT INTERFACE</p>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN PORTFOLIO CONTENT ==================== -->
+  <div class="portfolio-container hidden" id="portfolioContainer">
+
+
+
+    <div class="container" id="home">
+      <!-- HERO SECTION -->
+      <header class="hero-section">
+        <div class="hero-text">
+          <h1 class="glitch-title">Janhavi Kasture</h1>
+          <h2 class="subtitle">CYBER SECURITY | MACHINE LEARNING | AI</h2>
+          <p class="description">A Cyber Security undergraduate exploring Artificial Intelligence, Machine Learning, and software engineering through continuous learning and hands-on projects.</p>
+        </div>
+
+        <div class="image-container">
+          <div class="glowing-ring">
+          <img src="assets/janhavi.png" alt="Janhavi Kasture" class="profile-img">
+        </div>
+      </div>
+      </header>
+
+      <!-- CONNECTED CARDS GRID -->
+      <nav class="nav-grid">
+        <!-- 1. Skills Card -->
+        <div class="nav-card" data-target="skills">
+          <i class="fa-solid fa-cube icon"></i>
+          <h3>SKILLS</h3>
+        </div>
+
+        <!-- Wire -->
+        <div class="connector-line">
+          <svg class="line-svg" viewBox="0 0 40 40">
+            <line x1="0" y1="20" x2="40" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="2s" repeatCount="indefinite" path="M 0,20 L 40,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 2. Coding Card -->
+        <div class="nav-card" data-target="coding">
+          <i class="fa-solid fa-code icon"></i>
+          <h3>CODING</h3>
+        </div>
+
+        <!-- AND Gate -->
+        <div class="connector-gate and-gate">
+          <svg class="gate-svg" viewBox="0 0 80 40">
+            <line x1="0" y1="20" x2="25" y2="20" class="gate-wire" />
+            <g class="gate-body-group">
+              <path d="M 25,10 H 40 A 10,10 0 0,1 50,20 A 10,10 0 0,1 40,30 H 25 Z" class="gate-body" />
+              <text x="35" y="23" class="gate-label">AND</text>
+            </g>
+            <line x1="50" y1="20" x2="80" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0,20 L 80,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 3. Experience Card -->
+        <div class="nav-card" data-target="experience">
+          <i class="fa-solid fa-briefcase icon"></i>
+          <h3>EXPERIENCE</h3>
+        </div>
+
+        <!-- NAND Gate -->
+        <div class="connector-gate nand-gate">
+          <svg class="gate-svg" viewBox="0 0 80 40">
+            <line x1="0" y1="20" x2="25" y2="20" class="gate-wire" />
+            <g class="gate-body-group">
+              <path d="M 25,10 H 40 A 10,10 0 0,1 50,20 A 10,10 0 0,1 40,30 H 25 Z" class="gate-body" />
+              <circle cx="53" cy="20" r="3" class="gate-negation" />
+              <text x="35" y="23" class="gate-label">NAND</text>
+            </g>
+            <line x1="56" y1="20" x2="80" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="3s" repeatCount="indefinite" path="M 0,20 L 80,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 4. Connect with Janhavi Card -->
+        <div class="nav-card" data-target="contact">
+          <i class="fa-solid fa-envelope icon"></i>
+          <h3>Connect with Janhavi</h3>
+          <div class="quick-links">
+            <a href="https://www.linkedin.com/in/janhavi-kasture-883929233/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/janhavi67" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:janhavikasture@gmail.com" title="Email"><i class="fa-solid fa-envelope-open"></i></a>
+          </div>
+        </div>
+
+        <!-- Wire -->
+        <div class="connector-line">
+          <svg class="line-svg" viewBox="0 0 40 40">
+            <line x1="0" y1="20" x2="40" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="2.2s" repeatCount="indefinite" path="M 0,20 L 40,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 5. Projects Card -->
+        <div class="nav-card" data-target="projects">
+          <i class="fa-solid fa-grip icon"></i>
+          <h3>PROJECTS</h3>
+        </div>
+
+        <!-- Wire -->
+        <div class="connector-line">
+          <svg class="line-svg" viewBox="0 0 40 40">
+            <line x1="0" y1="20" x2="40" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="2s" repeatCount="indefinite" path="M 0,20 L 40,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 6. Certifications Card -->
+        <div class="nav-card" data-target="certifications">
+          <i class="fa-solid fa-shield-halved icon"></i>
+          <h3>CERTIFICATIONS</h3>
+        </div>
+
+        <!-- XOR Gate -->
+        <div class="connector-gate xor-gate">
+          <svg class="gate-svg" viewBox="0 0 80 40">
+            <line x1="0" y1="20" x2="25" y2="20" class="gate-wire" />
+            <g class="gate-body-group">
+              <path d="M 20,10 A 15,15 0 0,1 20,30 M 24,10 A 15,15 0 0,1 24,30 L 35,30 A 15,15 0 0,0 50,20 A 15,15 0 0,0 35,10 Z" class="gate-body" />
+              <text x="35" y="23" class="gate-label">XOR</text>
+            </g>
+            <line x1="50" y1="20" x2="80" y2="20" class="gate-wire" />
+            <circle r="3" class="gate-pulse">
+              <animateMotion dur="2.8s" repeatCount="indefinite" path="M 0,20 L 80,20" />
+            </circle>
+          </svg>
+        </div>
+
+        <!-- 7. Feedback Card -->
+        <div class="nav-card" data-target="feedback">
+          <i class="fa-solid fa-comment-dots icon"></i>
+          <h3>FEEDBACK</h3>
+        </div>
+      </nav>
+
+      <!-- DYNAMIC CONTENT PANEL -->
+      <main class="content-panel" style="display: none;"></main>
+
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>

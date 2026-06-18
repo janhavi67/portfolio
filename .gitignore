@@ -1,0 +1,13 @@
+# Exclude deployment package
+portfolio.zip
+
+# Exclude temporary backup files
+*.bak
+index.html.bak
+script.js.bak
+style.css.bak
+
+# Exclude Python test scripts and generated frames
+scratch/
+sim_*.png
+raw_frame_*.png
