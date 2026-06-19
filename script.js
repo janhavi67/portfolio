@@ -1,3 +1,9 @@
+// ==================== DATABASE CONFIGURATION (SUPABASE) ====================
+// Paste your Supabase Project URL and anon key here to connect your live Guestbook.
+// If left blank, it will automatically fall back to browser localStorage.
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== 1. CUSTOM CURSOR FOLLOWER ====================
@@ -221,8 +227,88 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==================== 4. DYNAMIC SECTIONS CONTENT DATABASE ====================
-  // Live Feedback Comments list (local database in JS)
-  const feedbackData = [];
+  // Live Feedback Comments list (local fallback)
+  let feedbackData = [];
+
+  // Fetch comments from Supabase or localStorage
+  async function fetchFeedback() {
+    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/feedback?select=*&order=created_at.desc`, {
+          method: 'GET',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+          }
+        });
+        if (res.ok) {
+          const data = await res.json();
+          feedbackData = data;
+        } else {
+          console.error("Supabase fetch failed, status:", res.status);
+          loadLocalFeedback();
+        }
+      } catch (e) {
+        console.error("Error fetching from Supabase:", e);
+        loadLocalFeedback();
+      }
+    } else {
+      loadLocalFeedback();
+    }
+  }
+
+  function loadLocalFeedback() {
+    const local = localStorage.getItem('portfolio_feedback');
+    if (local) {
+      try {
+        feedbackData = JSON.parse(local);
+      } catch (e) {
+        feedbackData = [];
+      }
+    } else {
+      // Default placeholder comments
+      feedbackData = [
+        { name: "Satoshi", time: "2 hours ago", text: "Incredibly fast load time and clean terminal design!" },
+        { name: "Visitor", time: "1 day ago", text: "Nice work on the steganography project. Very impressive." }
+      ];
+    }
+  }
+
+  function saveLocalFeedback() {
+    localStorage.setItem('portfolio_feedback', JSON.stringify(feedbackData));
+  }
+
+  async function postFeedback(name, text) {
+    const timeStr = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+    const newItem = { name, text, time: timeStr };
+
+    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/feedback`, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify(newItem)
+        });
+        if (res.ok) {
+          await fetchFeedback(); // Refresh the list
+          return;
+        } else {
+          console.error("Supabase insert failed, status:", res.status);
+        }
+      } catch (e) {
+        console.error("Error inserting to Supabase:", e);
+      }
+    }
+    
+    // Fallback: add to local array and save to localStorage
+    feedbackData.unshift(newItem);
+    saveLocalFeedback();
+  }
 
   const panelContentMap = {
     feedback: `
@@ -593,6 +679,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Post-rendering actions
       if (target === 'feedback') {
         renderFeedbackStack();
+        // Fetch fresh comments from Supabase and re-render
+        fetchFeedback().then(() => {
+          renderFeedbackStack();
+        });
       }
     }
   }
@@ -644,15 +734,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = msgEl.value.trim();
 
       if (name && text) {
-        // Prepend new comment to local JS DB
-        feedbackData.unshift({
-          name: name,
-          time: 'Just now',
-          text: text
+        postFeedback(name, text).then(() => {
+          renderFeedbackStack();
         });
-
-        // Re-render
-        renderFeedbackStack();
 
         // Reset
         nameEl.value = '';
@@ -663,18 +747,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Contact form submission
     if (e.target && e.target.id === 'contactForm') {
       e.preventDefault();
-      const email = document.getElementById('contactEmail').value.trim();
+      const emailEl = document.getElementById('contactEmail');
+      const email = emailEl.value.trim();
       const statusEl = document.getElementById('formStatus');
 
       if (statusEl) {
         statusEl.style.color = '#c9ada7';
         statusEl.textContent = 'ESTABLISHING SECURE SSH TUNNEL...';
 
-        setTimeout(() => {
-          statusEl.style.color = '#9a8c98';
-          statusEl.innerHTML = `[SUCCESS] Secure package transmitted.<br>Email logged: <strong>${email}</strong>. Connection established!`;
-          e.target.reset();
-        }, 1500);
+        // Prepare Netlify Forms body
+        const bodyParams = new URLSearchParams();
+        bodyParams.append('form-name', 'contact');
+        bodyParams.append('email', email);
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: bodyParams.toString()
+        })
+        .then(response => {
+          if (response.ok) {
+            statusEl.style.color = '#9a8c98';
+            statusEl.innerHTML = `[SUCCESS] Secure package transmitted.<br>Email logged: <strong>${email}</strong>. Connection established!`;
+            e.target.reset();
+          } else {
+            throw new Error('Server responded with status ' + response.status);
+          }
+        })
+        .catch(error => {
+          console.error("Form submission failed:", error);
+          statusEl.style.color = '#ff6b6b';
+          statusEl.innerHTML = `[ERROR] Secure connection failed. Please try again.`;
+        });
       }
     }
   });
