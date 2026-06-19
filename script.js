@@ -1,8 +1,8 @@
 // ==================== DATABASE CONFIGURATION (SUPABASE) ====================
 // Paste your Supabase Project URL and anon key here to connect your live Guestbook.
 // If left blank, it will automatically fall back to browser localStorage.
-const SUPABASE_URL = "";
-const SUPABASE_ANON_KEY = "";
+const SUPABASE_URL = "https://uonekrkjfgmuscgajxqp.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVvbmVrcmtqZmdtdXNjZ2FqeHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4Nzk5NTQsImV4cCI6MjA5NzQ1NTk1NH0.uouCRjXFP1ZLepsKpuUTpiV0PzXSMYmmVxKUrqh92IQ";
 
 document.addEventListener('DOMContentLoaded', () => {
 
