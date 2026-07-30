@@ -425,13 +425,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Extracurricular</div>
+          <div class="timeline-date" style="color: var(--color-neon-gold); text-shadow: 0 0 8px rgba(255, 209, 102, 0.4);">Extracurricular</div>
           <div class="timeline-content">
-            <h4>Achievements & Leadership Roles</h4>
-            <p class="institution">VIT Campus Involvement</p>
-            <ul class="presentations-list" style="margin-top: 10px; margin-left: 20px; color: #c9ada7; font-size: 0.9rem; line-height: 1.6;">
-              <li>Top academic grades in C++, Probability and Statistics, Computational Physics, Discrete Math, and Linear Algebra</li>
-              <li>Active member of FYI Club Social Media Team, NSS Unit Volunteer, and Sponsorship Team in E-Cell</li>
+            <h4 style="color: var(--color-neon-gold);">E-Cell | Finance & Marketing Team</h4>
+            <p class="institution">VIT Bhopal University</p>
+            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+              <li>Managed budget allocations for campus events; developed marketing strategies to boost student engagement.</li>
+              <li>Negotiated with vendors and sponsors to ensure project financial viability.</li>
+            </ul>
+
+            <h4 style="color: var(--color-neon-gold);">FYI Club | Social Media Team</h4>
+            <p class="institution">VIT Bhopal University</p>
+            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+              <li>Curated digital content across platforms; analysed engagement metrics to optimise reach.</li>
+            </ul>
+
+            <h4 style="color: var(--color-neon-gold);">NSS – National Service Scheme | Onstage Team</h4>
+            <p class="institution">VIT Bhopal University</p>
+            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6;">
+              <li>Represented NSS in public forums; coordinated logistics for live performances and awareness drives.</li>
             </ul>
           </div>
         </div>

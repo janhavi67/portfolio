@@ -1137,3 +1137,11 @@ button, input, textarea {
     display: none; /* Hide header links on very small mobile viewports */
   }
 }
+
+/* ==================== 15. CUSTOM HIGHLIGHTING ==================== */
+.cert-header-cyber h4 {
+  color: var(--color-neon-gold) !important;
+}
+.cert-info-cyber .desc, .cert-info-cyber .issuer {
+  color: var(--color-neon-gold) !important;
+}
