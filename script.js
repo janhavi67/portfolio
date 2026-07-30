@@ -402,6 +402,19 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
+          <div class="timeline-date">Virtual Internship</div>
+          <div class="timeline-content">
+            <h4>ServiceNow Virtual Internship Program</h4>
+            <p class="institution">AICTE & TheSmartBridge | Supported by ServiceNow</p>
+            <ul class="presentations-list" style="margin-top: 10px; margin-left: 20px; color: #c9ada7; font-size: 0.9rem; line-height: 1.6;">
+              <li>Completed hands-on modules on cloud-based workflow and automation platforms used across IT, HR, security ops, and customer support.</li>
+              <li>Completed courses: Welcome to ServiceNow & Micro Certification, Introduction to Agentic AI, ServiceNow Administration Fundamentals.</li>
+              <li>Bridged academic learning with enterprise-grade industry application of cloud automation tools.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Current</div>
           <div class="timeline-content">
             <h4>B.Tech - Computer Science & Engineering (Cyber Security)</h4>
