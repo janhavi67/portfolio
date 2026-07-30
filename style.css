@@ -249,6 +249,32 @@ button, input, textarea {
   line-height: 1.6;
 }
 
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 10px 22px;
+  background: rgba(154, 140, 152, 0.1);
+  border: 1px solid rgba(154, 140, 152, 0.4);
+  color: var(--color-neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.resume-btn:hover {
+  background: rgba(154, 140, 152, 0.2);
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 0 15px rgba(154, 140, 152, 0.3);
+  transform: translateY(-2px);
+}
+
 /* Glowing Image Ring */
 .image-container {
   position: relative;
