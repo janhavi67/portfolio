@@ -564,7 +564,21 @@ document.addEventListener('DOMContentLoaded', () => {
     certifications: `
       <h3>Certifications & Credentials</h3>
       <div class="certifications-grid-cyber">
-        <!-- 1. IBM Machine Learning -->
+        <!-- 1. Microsoft Azure Fundamentals -->
+        <div class="cert-card-cyber">
+          <div class="cert-icon-cyber"><i class="fa-brands fa-microsoft"></i></div>
+          <div class="cert-info-cyber">
+            <div class="cert-header-cyber">
+              <h4>Microsoft Certified: Azure Fundamentals</h4>
+              <span class="cert-date">Jul 2026</span>
+            </div>
+            <p class="issuer">Microsoft</p>
+            <p class="desc">Earned the Microsoft Certified: Azure Fundamentals credential, verifying foundational knowledge of cloud services and how those services are provided with Microsoft Azure.</p>
+            <a href="https://learn.microsoft.com/en-us/users/janhavikasture-3116/credentials/certification/azure-fundamentals" target="_blank" class="cert-link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. IBM Machine Learning -->
         <div class="cert-card-cyber">
           <div class="cert-icon-cyber"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="cert-info-cyber">
