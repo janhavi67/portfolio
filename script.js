@@ -402,19 +402,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Virtual Internship</div>
-          <div class="timeline-content">
-            <h4>ServiceNow Virtual Internship Program</h4>
-            <p class="institution">AICTE & TheSmartBridge | Supported by ServiceNow</p>
-            <ul class="presentations-list" style="margin-top: 10px; margin-left: 20px; color: #c9ada7; font-size: 0.9rem; line-height: 1.6;">
-              <li>Completed hands-on modules on cloud-based workflow and automation platforms used across IT, HR, security ops, and customer support.</li>
-              <li>Completed courses: Welcome to ServiceNow & Micro Certification, Introduction to Agentic AI, ServiceNow Administration Fundamentals.</li>
-              <li>Bridged academic learning with enterprise-grade industry application of cloud automation tools.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
           <div class="timeline-date">Current</div>
           <div class="timeline-content">
             <h4>B.Tech - Computer Science & Engineering (Cyber Security)</h4>
@@ -425,25 +412,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date" style="color: var(--color-neon-gold); text-shadow: 0 0 8px rgba(255, 209, 102, 0.4);">Extracurricular</div>
+          <div class="timeline-date">Extracurricular</div>
           <div class="timeline-content">
-            <h4 style="color: var(--color-neon-gold);">E-Cell | Finance & Marketing Team</h4>
-            <p class="institution">VIT Bhopal University</p>
-            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-              <li>Managed budget allocations for campus events; developed marketing strategies to boost student engagement.</li>
-              <li>Negotiated with vendors and sponsors to ensure project financial viability.</li>
-            </ul>
-
-            <h4 style="color: var(--color-neon-gold);">FYI Club | Social Media Team</h4>
-            <p class="institution">VIT Bhopal University</p>
-            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-              <li>Curated digital content across platforms; analysed engagement metrics to optimise reach.</li>
-            </ul>
-
-            <h4 style="color: var(--color-neon-gold);">NSS – National Service Scheme | Onstage Team</h4>
-            <p class="institution">VIT Bhopal University</p>
-            <ul class="presentations-list" style="margin-top: 5px; margin-left: 20px; color: var(--color-neon-gold); font-size: 0.9rem; line-height: 1.6;">
-              <li>Represented NSS in public forums; coordinated logistics for live performances and awareness drives.</li>
+            <h4>Achievements & Leadership Roles</h4>
+            <p class="institution">VIT Campus Involvement</p>
+            <ul class="presentations-list" style="margin-top: 10px; margin-left: 20px; color: #c9ada7; font-size: 0.9rem; line-height: 1.6;">
+              <li>Top academic grades in C++, Probability and Statistics, Computational Physics, Discrete Math, and Linear Algebra</li>
+              <li>Active member of FYI Club Social Media Team, NSS Unit Volunteer, and Sponsorship Team in E-Cell</li>
             </ul>
           </div>
         </div>
@@ -595,10 +570,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="cert-info-cyber">
             <div class="cert-header-cyber">
               <h4>Microsoft Certified: Azure Fundamentals</h4>
-              <span class="cert-date">Jul 2026</span>
+              <span class="cert-date">July 2026</span>
             </div>
             <p class="issuer">Microsoft</p>
-            <p class="desc">Earned the Microsoft Certified: Azure Fundamentals credential, verifying foundational knowledge of cloud services and how those services are provided with Microsoft Azure.</p>
+            <p class="desc">Foundational certification validating core knowledge of cloud services and how those services are provided with Microsoft Azure.</p>
             <a href="https://learn.microsoft.com/en-us/users/janhavikasture-3116/credentials/certification/azure-fundamentals" target="_blank" class="cert-link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
