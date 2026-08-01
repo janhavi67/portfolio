@@ -412,6 +412,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
+          <div class="timeline-date">Virtual Internship</div>
+          <div class="timeline-content">
+            <h4>ServiceNow Virtual Internship</h4>
+            <p class="institution">ServiceNow</p>
+            <p class="timeline-desc">Completed a virtual internship program focusing on ServiceNow platform fundamentals, IT service management workflows, and enterprise digital transformation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Extracurricular</div>
           <div class="timeline-content">
             <h4>Achievements & Leadership Roles</h4>
