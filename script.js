@@ -360,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="skill-badge" title="Pandas"><i class="devicon-pandas-plain colored"></i> Pandas</span>
             <span class="skill-badge" title="NumPy"><i class="devicon-numpy-plain colored"></i> NumPy</span>
             <span class="skill-badge" title="TensorFlow"><i class="devicon-tensorflow-original colored"></i> TensorFlow</span>
+            <span class="skill-badge" title="Keras"><i class="devicon-keras-plain colored"></i> Keras</span>
             <span class="skill-badge" title="Matplotlib"><i class="fa-solid fa-chart-area"></i> Matplotlib</span>
             <span class="skill-badge" title="Data Preprocessing"><i class="fa-solid fa-filter"></i> Preprocessing</span>
           </div>
@@ -574,7 +575,21 @@ document.addEventListener('DOMContentLoaded', () => {
     certifications: `
       <h3>Certifications & Credentials</h3>
       <div class="certifications-grid-cyber">
-        <!-- 1. Microsoft Azure Fundamentals -->
+        <!-- 1. IBM Deep Learning & Neural Networks with Keras -->
+        <div class="cert-card-cyber">
+          <div class="cert-icon-cyber"><i class="fa-solid fa-brain"></i></div>
+          <div class="cert-info-cyber">
+            <div class="cert-header-cyber">
+              <h4>Introduction to Deep Learning & Neural Networks with Keras</h4>
+              <span class="cert-date">Oct 2026</span>
+            </div>
+            <p class="issuer">IBM | Coursera</p>
+            <p class="desc">Credential verifying neural network architectures, activation functions, forward/backward propagation, loss functions, and model implementation with Keras.</p>
+            <a href="https://coursera.org/verify/HOFHKH822Q59" target="_blank" class="cert-link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. Microsoft Azure Fundamentals -->
         <div class="cert-card-cyber">
           <div class="cert-icon-cyber"><i class="fa-brands fa-microsoft"></i></div>
           <div class="cert-info-cyber">
